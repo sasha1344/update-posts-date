@@ -1,0 +1,207 @@
+$white: #FFFFFF;
+$black: #000000;
+$red: #F55E4F;
+$gray: #777;
+$yellow: #EDFF9D;
+
+$background-light: #f4f4f4;
+$border-dark: #DDDDDD;
+$border-light: #EEEEEE;
+
+/**
+ * Auto Update Posts Date Options Page.
+ */
+.udate-rules-form {
+    margin: 20px 0 0;
+
+    .server-time {
+        background: $white;
+        border: 1px solid $border-dark;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    /* Row */
+    .udate-table {
+        background: $white;
+        border: 1px solid $border-dark;
+        border-collapse: collapse;
+        width: 100%;
+
+        tr.ui-state-highlight {
+            td {
+                background-color: $yellow;
+                border-color: $yellow;
+            }
+        }
+
+        .udate-row {
+            border: none;
+
+            &.rule-clone-row {
+                display: none;
+            }
+
+            td {
+                background: $white; /* sortable transparensy fix */
+                border-bottom: 1px solid $border-light;
+                border-left: 1px solid $border-light;
+                vertical-align: top;
+                padding: 0;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &.col-action {
+                    background: $background-light;
+                    width: 16px;
+                    padding: 15px 12px;
+                    color: $gray;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+
+                &.col-num {
+                    cursor: move;
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+
+                &.col-delete {
+                    .udate-delete-icon {
+                        display: block;
+                        color: $gray;
+                        background-color: $white;
+                        border: 1px solid $border-dark;
+                        border-radius: 50%;
+                        font-size: 14px;
+                        line-height: 18px;
+                        text-decoration: none;
+                        width: 20px;
+                        height: 20px;
+                        opacity: 0;
+
+                        &:hover {
+                            border-color: $red;
+                            background-color: $red;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
+
+            &:hover {
+                .col-delete {
+                    .udate-delete-icon {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Rows not found */
+    .udate-not-found {
+        background: $white;
+        padding: 14px 20px;
+    }
+
+    /* Field */
+    .udate-field {
+        position: relative;
+        margin: 0;
+        padding: 15px 12px;
+
+        .udate-label {
+            display: block;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+
+        .udate-input {
+            vertical-align: top;
+            display: flex;
+
+            select, input {
+                min-width: 60px;
+                width: 100%;
+            }
+        }
+
+        .description {
+            font-size: 13px;
+            font-style: italic;
+            margin: 2px 0 5px;
+            color: $gray;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: disc;
+                list-style-position: inside;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        .udate-error {
+            display: inline-block;
+            border-left: 2px solid $red;
+            background-color: $background-light;
+            font-size: 12px;
+            margin-top: 8px;
+            padding: 3px 10px 3px 6px;
+            border-radius: 2px;
+        }
+
+        &.category-field {
+            min-width: 150px;
+        }
+
+        &.frequency-field,
+        &.increment-field {
+            max-width: 350px;
+
+            .udate-input {
+                margin: 0 -10px;
+            }
+
+            .subfield-wrap {
+                padding: 0 10px;
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: block;
+                    margin-right: 6px;
+                }
+            }
+        }
+
+        &.date-type-field {
+            min-width: 160px;
+        }
+    }
+
+    .udate-actions {
+        margin: 20px 0 0;
+        text-align: right;
+    }
+
+    .udate-submit {
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+}
