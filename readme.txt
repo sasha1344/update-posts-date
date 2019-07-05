@@ -15,5 +15,5 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
 
-= 1.0.0 - June 17, 2019 =
+= 1.0.0 - July 5, 2019 =
 * Initial Release
